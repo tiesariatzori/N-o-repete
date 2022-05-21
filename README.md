@@ -3,11 +3,9 @@
 Retorna numeros não repedidos do array;
 
 
- public function naoRepete($inicio = 0, $fim = 20, $valorAleatorioInicio = 1, $valorAleatorioFim = 10)
-    {
-
-
-
+  public function naoRepete($inicio = 0, $fim = 20, $valorAleatorioInicio = 1, $valorAleatorioFim = 10)
+  {
+  
         $mensagem = 'Valores Não Repetidos : ';
 
         if ($inicio > $fim || $valorAleatorioInicio > $valorAleatorioFim) {
@@ -36,3 +34,13 @@ Retorna numeros não repedidos do array;
                 $arrayUnicos[] = $repetido;
             }
         }
+
+        if (isset($arrayUnicos)) {
+
+            foreach ($arrayUnicos as $unico) {
+                $mensagem .= $unico . ',';
+            }
+        }
+
+        return $mensagem;
+ }
